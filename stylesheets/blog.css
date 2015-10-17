@@ -1,0 +1,27 @@
+
+h2 {
+	left:0;
+	position:static;
+	color:white;
+	background-color:#787A7F;
+	font-weight:bold;
+
+}
+
+p {
+	color:white;
+}
+footer {
+	position:static;
+	right:0%;
+	bottom:0;
+	letter-spacing: 1px;
+
+}
+a > img {
+	position:relative;
+	bottom:0;
+	height:3em;
+	width:3em;
+	
+}

@@ -1,0 +1,91 @@
+html {
+	font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: #787A7F;
+  color:#564D57;
+}
+
+
+.container {
+    width: 150px;
+    height: 70px;
+    position:relative;
+  
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    position:relative;
+   
+}
+
+div > img { 
+   border:1px solid black;
+   position: absolute;
+}
+
+h1 {
+	left:0;
+	position:static;
+	background-color:#E9AFF0;
+	letter-spacing: 1px
+}
+
+section > nav {
+	position:absolute;
+	right:1em;
+	top:2em;
+	word-spacing: 1em;
+
+}
+
+a:link {
+	text-decoration: none;
+	color:#564D57;
+}
+
+
+a:hover {
+	text-decoration: none;
+	color:#FFE0EB;
+}
+
+
+a:visited {
+	color:#564D57;
+	text-decoration: none;
+}
+
+h2 {
+	position:absolute;
+	left:45%;
+	top:5em;
+	background-color:#E9AFF0;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+
+section > table {
+	left:37%;
+	top:2em;
+	position:relative;
+}
+
+footer {
+	position:absolute;
+	right:0%;
+	bottom:0;
+	letter-spacing: 1px;
+
+}
+a > img {
+	position:relative;
+	bottom:0;
+	height:3em;
+	width:3em;
+	
+}
