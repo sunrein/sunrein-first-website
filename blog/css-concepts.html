@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <title>Week 3 CSS Blog</title>
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Sunrein blog</h1>
+  </header>
+  <section>
+  <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Blog</a>
+  
+
+    </nav>
+    </section>
+
+  <article>
+    <h2>CSS Positioning - 10/18/2015
+    <br>The differences between static, relative, absolute, and fixed</h2>
+    
+    <p>
+    At the beginning of Week 3, we were prompted to watch a couple videos on CSS. One was over an hour long, and was a presentation entitled "CSS Sucks," subtitled "Life is Hell." While humorous, I didn't take the title too seriously. Hyperbole, I figured, for laughs.</p>
+
+     <p>
+    How wrong I was.</p>
+     <p>
+    One thing I wish I knew going in to CSS was the struggles of positioning. I do not know what my peers would consider the hardest part of working with CSS, but for me, this was definitley the trickiest. Unlike HTML, there are no simple tags for positioning. Rather, we have things like margin, border, and padding, as well as another category of positioning elements: static, relative, absollute, and fixed. I used the latter the most when structuring my site, for better or for worse. I am glad that I was able to figure out what all of these terms mean and what they to help structure the webpage. Whether or not what I did follows best practices, I'm not sure. But this is how these four elements work.</p>
+
+    <h3>Static</h3>
+     <p>
+    I think that static positioning is the easiest to understand. It does what it says; it's static. This means that it won't move about the page, even if you instruct it to using commands like top, bottom, left, or right. The other nice thing about static positioning is that it is the default status of any element. You don't have to remember to set something to static, you just need to remember to specify something else if you want the element to move.</p>
+
+     <p>This is what the code looks like. Just for clarity's sake, I added the position:static; code to the elements. I also made sure they are different sizes, in order to really deliniate them from one another. </p>
+     <img class="css-screenshot" src="https://github.com/sunrein/sunrein.github.io/blob/master/imgs/css-1.png?raw=true">
+ 
+    <br>And this is the result on our sample page: <br>
+    <img class="kitten-screenshot" src="https://github.com/sunrein/sunrein.github.io/blob/master/imgs/static-kittens.png?raw=true">
+
+
+    <p>As you can see, the pictures align rather nicely on the page. They are following the general flow of the website with no directions. However, if I wanted to move them about the page, nothing would happen because first and foremost, they have been instructed to remain static.</p>
+
+    <h3>Relative</h3>
+
+    <p>Relatively positioned elements behave quite similarly to static ones. However, they can be moved using commands such as top, bottom, left, and right. This is a very precise way to move images around to fit whatever your speficiations are, including having the images overlap one another. </p>
+    <br>
+    <img class="kitten-screenshot" src="https://github.com/sunrein/sunrein.github.io/blob/master/imgs/relative-kittens.png?raw=true"><br>
+ 
+    <p>Okay! So we can move the images about the page. For the example, I just moved them left and right, so you could really evidently tell that they are moving about. This is what I did to the code:</p>
+
+    <img class="css-screenshot" src="https://github.com/sunrein/sunrein.github.io/blob/master/imgs/CSS-2.png?raw=true">
+ 
+    <p>I changed the postition to relative, and then moved them left or right. This can also be applied to moving the images up or down on the page.</p>
+
+    <p>It is important to note how the kittens are moving, which is relative to how they would be positioned if they remained static, hence the name. The specifications I gave had them move ems relative to where they would have been, rather than moving in relation to one another. This is helpful for making slight adjustments, but there is a different way to specify where exactly on the page you want them to go, relative to nothing.</p>
+
+  <h3>Absolute</h3>
+
+    <p>This is a way of specifying the absolute, exact place you want your elements to be, using directions. This is a much more exact and precise way to place your elements because they aren't being positioned based on the pre-existing position of anything else. In relative, they were moving relative to themselves. Here, we can tell them exactly where to go. </p>
+    <br>
+    <img class="kitten-screenshot" src="https://github.com/sunrein/sunrein.github.io/blob/master/imgs/absolute-kittens.png?raw=true"><br>
+ 
+    <p>Hooray! They can go anwyere about the page! You probably don't want them to do this, but they could even cover up the header, the footer, or one another. Here's what the code looks like for the image above:</p>
+    <img class="css-screenshot" src="https://github.com/sunrein/sunrein.github.io/blob/master/imgs/CSS-3.png?raw=true"><br>
+ 
+<h3>Fixed</h3>
+
+    <p>Fixed is handy when you want something to stay on the page, no matter what. When you scroll, it will remain in the same place on the page. It is sort of hard to demonstrate what this looks like through a screenshot, but if you've ever been on a webpage that had a navigation bar that followed you down a page while you scrolled, that was fixed positioning. Here is (sort of) what it looks like while scrolling.</p>
+    <img class="kitten-screenshot" src="https://github.com/sunrein/sunrein.github.io/blob/master/imgs/fixed-kittens.png?raw=true"><br>
+
+ 
+    <p>As you can see, the kitten follows you all down the page, over the text that I copied about kittens from Wikipedia.</p>
+
+
+    <p>And this is what the code for that image looks like:</p>
+    <br>
+    <img class="css-screenshot" src="https://github.com/sunrein/sunrein.github.io/blob/master/imgs/css-4.png?raw=true"><br>
+
+    <h3>Conclusion</h3>
+    <p>Those are four ways to move things about the page, depending on where you want them to go and what purpose you want them to serve. Static follows the flow of the page and is the default setting. Relative moves things relative to where they would be if they remained static. Absolute is a way of placing something exactly where you want to go on the page, regarless of where it would be statically, and fixed stays in the same spot on the page, even when the page is scrolled or moved around.</p>
+
+  </article>
+
+  <footer>
+    <nav>
+    <a href="https://github.com/sunrein">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Github.png"> </a></td>
+      
+    <a href="https://www.linkedin.com/pub/sabrina-unrein/103/3a1/37">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Linkedin.png"></a>
+
+    <a href="mailto:sabrina.unrein@gmail.com">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquicons/128/Email.png"/>
+      </a>
+    <a href="https://twitter.com/sabermoon"><img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Twitter.png"/>
+      </a>
+    
+    </nav>
+
+    </footer>
+
+</body>
+
+
+</html>
+
+
