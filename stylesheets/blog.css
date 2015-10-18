@@ -25,3 +25,19 @@ a > img {
 	width:3em;
 	
 }
+
+h3 {
+	color:white;
+	background-color:#787A7F;
+	font-weight:bold;
+
+}
+.css-screenshot {
+	height:350px;
+	width:auto;
+}
+
+.kitten-screenshot {
+	height: 250px;
+	width:auto;
+}
