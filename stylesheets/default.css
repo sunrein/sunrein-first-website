@@ -5,6 +5,7 @@ html {
 body {
   background-color: white;
   color:#564D57;
+
 }
 
 
@@ -43,6 +44,7 @@ section > nav {
 }
 table {
 	text-decoration: none;
+	list-style-type: none;
 }
 
 a:link {
@@ -50,6 +52,11 @@ a:link {
 	color:#564D57;
 }
 
+li > a:hover {
+	text-decoration: none;
+	list-style-type: none;
+	color:black;
+}
 
 a:hover {
 	text-decoration: none;
@@ -76,6 +83,7 @@ section > table {
 	left:37%;
 	top:2em;
 	position:relative;
+	list-style-type: none;
 }
 
 footer {
