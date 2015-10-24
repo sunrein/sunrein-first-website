@@ -39,8 +39,8 @@ h2 {
 	font-weight: bold;
 	font-size:25px;
 	color:black;
-	line-height: 1.5em;
-	letter-spacing:.2em;
+	line-height: 2em
+	letter-spacing:1.5em;
 
 }
 
@@ -62,15 +62,15 @@ article {
 }
 
 a > img {
-	
-
+	display:inline;
+	float:right;
 	height:2.5em;
 	width:2.5em;
 	
 }
 
 footer {
-	  float:bottom;
+	  margin-top: 10px;
 }
 
 
@@ -88,7 +88,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #FFE877;
+    border-top: 1px solid #ccc;
     margin: 1em 0;
     padding: 0; 
 }
