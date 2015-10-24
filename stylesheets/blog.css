@@ -41,6 +41,8 @@ h2 {
 	color:black;
 	line-height: 1.5em;
 	letter-spacing:.2em;
+	float:center;
+	text-align: center;
 
 }
 
@@ -49,6 +51,7 @@ h3 {
 	font-size:18px;
 	color:black;
 	border:3em;
+
 }
 
 article {
@@ -88,7 +91,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #FFE877;
+    border-top: 1px solid #C2ACC4;
     margin: 1em 0;
     padding: 0; 
 }

@@ -8,8 +8,9 @@ body {
 
 h1 {
 	display:inline-block;
-	letter-spacing: 3px;
+	letter-spacing: 5px;
 	color:black;
+
 
 }
 }
@@ -57,8 +58,6 @@ article {
 	padding-left:10em;
 	padding-right: 10em;
 	line-height: 1.5em;
-
-
 }
 
 a > img {
@@ -88,7 +87,25 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #FFE877;
+    border-top: 1px solid #C2ACC4;
     margin: 1em 0;
     padding: 0; 
+}
+
+figure > img {
+	height:300px;
+	width:auto;
+	margin:1em;
+}
+figure {
+	float:middle;
+	
+}
+
+figcaption {
+	float:middle;
+}
+
+span {
+	color:#FFDD58;;
 }
