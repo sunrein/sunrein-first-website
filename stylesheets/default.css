@@ -62,10 +62,11 @@ article {
 
 a > img {
 	
-
+	display:inline;
+	float:right;
 	height:2.5em;
 	width:2.5em;
-	
+
 }
 
 footer {
