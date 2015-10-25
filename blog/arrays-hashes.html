@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+
+  <title>Arrays vs Hashes</title>
+</head>
+
+<body>
+
+  <header>
+      <h1><span>S</span>.unrein blog</h1>
+  </header>
+  <section>
+     
+     <nav>
+        <a href="http://sunrein.github.io/"> Home </a> |
+          <a href="https://github.com/sunrein">About </a> |
+          <a href="https://github.com/sunrein">Projects </a> |
+          <a href="https://sunrein.github.io/blog-index.html"> Blog</a>
+  
+
+    </nav>
+    <hr>
+    </section>
+    
+  <article>
+
+
+    <h2>Arrays vs Hashes - 10/25/2015<br>
+    Their differences, and when and how to use them</h2>
+        <p>
+        Hashes and arrays are very similar concepts in Ruby. They are both important and useful ways of storing sets of data. These can include <span>integers, floats </span>(also known as numbers with decimals), and <span>strings</span> (a sequence of characters contained in " "). However, they do have several key differences, not only in how they are written, but also how they retrieve data and the purposes they can serve. Only being a beginner myself, I do not know all of the intricate nuances of their differences, nor do I have many examples of practical uses of hashes or arrays in programming, but I do understand how they differ. This means that in the future, when organizing my data, I have a better understanding of whether to use a hash or an array.
+        </p>
+        
+      <h3>Arrays</h3>
+   
+        <p>
+        Arrays are one way of organinzing a data set. While arrays you may have seen before in mathematics usually contain numbers exclusively, arrays can also contain strings. The key thing to know when learning about arrays is how they store data: arrays are organized lists, and the order of the data within it matters. This is particularly important when retrieving data from within an array.
+        </p>
+
+        <p>
+        Here's an example of an array:
+         </p>
+        <p>
+
+        best_selling_novels[A Tale of Two Cities, The Lord of the Rings, The Hobbit, The Little Prince, Harry Potter and the Philosopher's Stone, And Then There Were None, Dream of the Red Chamber]
+         </p>
+        <p>
+        For this example, I've looked up some of the best selling novels of all time, and I'm storing them in an array. I've listed them in order of number of copies sold, so I would like to maintain that order, which is why I've chosen an array. Now I want to put it to use. What is the third best selling novel of all time, according to this array?
+        </p>
+
+        <p>
+        You can retrieve data from an array using the object's index. The index is simply the order in which the data is stored. The one unusual thing about an index is that order goes 0, 1, 2, 3... starting with 0, not with 1. To call an object, you use the index.
+        </p>
+     
+        <p>
+        So, for the example above, we want to use best_selling_novels[2], because this will actually call the third number in the array. When we ask for best_selling_novels[2], we get back The Hobbit. We know that it is the third most popular, but we lack the information concerning how many copies are sold. This is where a hash would come in handy.
+        </p>
+      <h3>Hashes</h3>
+
+        <p>
+        Say we don't just want to know the order of the most popular books ever published. We want to know how many copies have been sold. This is where hashes can be useful. The main thing to know with hashes is how they store data. Unlike arrays, which store pieces of data individually, hashes are stored in pairs. The two parts of this pair are the <span>key</span> and the <span>value</span>. The key just another word for a name of the pair, the word that can be used in order to retrieve the value.
+        </p>
+
+        <p>
+        In our book example, if we wanted to store the data about sales rather than focusing on the order, we would use a hash. The key would be the book's title, and the value would be number of copies sold. This would be organized like this:
+         </p>
+        <p>
+        best_selling_novels = {"A Tale of Two Cities": "200 million", "The Lord of the Rings": "150 million", "The Hobbit": "140.6 million", "The Little Prince": "140 million", "Harry Potter and the Philosopher's Stone": "107 million", "And Then There Were None": "100 million", "Dream of the Red Chamber": "100 million"}
+        </p>
+        <p>
+        This is just one way of creating a new hash, but I thought it well illustrated how the keys and values are paired together. For example, "A Tale of Two Cities" is a key, and it's value is "200 million". If we knew it was one of the best selling novels, but didn't know how many copies, we could retrieve them from the hash like this:
+        </p>
+        <p>
+        best_selling_novels[:"A Tale of Two Cities"] and it would return "200 million."
+        </p>
+      <h3>Conclusion</h3>
+        <p>
+        Hopefully this was helpful in not only explaining hashes and arrays, but also in illustrating their potential uses. From my research, other benefits of hashes are that they are much faster at processing data, and also apparently newer versions of hashes also keep track of order in the data set, just like arrays do. It seems like good practice to keep using arrays when order matters, but it is something to keep in mind when working with hashes.
+        </p>
+ </article>
+ <hr>
+
+  <footer>
+    <nav>
+    <a href="https://github.com/sunrein">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Github.png"> </a></td>
+      
+    <a href="https://www.linkedin.com/pub/sabrina-unrein/103/3a1/37">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Linkedin.png"></a>
+
+    <a href="mailto:sabrina.unrein@gmail.com">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquicons/128/Email.png"/>
+      </a>
+    <a href="https://twitter.com/sabermoon"><img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Twitter.png"/>
+      </a>
+    
+    </nav>
+
+    </footer>
+
+</body>
+
+
+</html>
