@@ -100,3 +100,13 @@ p > span {
 	font-weight: bold;
 	color:black;
 }
+
+p > code {
+    font-size: 16px;
+    display: block;
+    color: rgb(93, 65, 124);
+    padding: 10px;
+    line-height: 1.4em;
+    white-space: pre;
+    text-align: left;
+}
