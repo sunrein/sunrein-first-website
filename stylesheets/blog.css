@@ -64,7 +64,7 @@ article {
 
 }
 
-a > img {
+footer > a > img {
 	display:inline;
 	float:right;
 	height:2.5em;
@@ -99,4 +99,19 @@ hr {
 p > span {
 	font-weight: bold;
 	color:black;
+}
+
+p > code {
+	font-size: 16px;
+	display:block;
+    color: #5d417c;
+    padding: 10px;
+    line-height: 1.4em;
+    white-space: pre;
+    text-align:left;
+   float:center;
+}
+
+.code-center {
+	text-align: center;
 }
