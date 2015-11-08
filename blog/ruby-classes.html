@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+
+  <title>Ruby Classes</title>
+</head>
+
+<body>
+
+  <header>
+      <h1><span>S</span>.unrein blog</h1>
+  </header>
+  <section>
+     
+     <nav>
+         <a href="http://sunrein.github.io/"> Home </a> |
+            <a href="https://github.com/sunrein">About </a> |
+            <a href="https://github.com/sunrein">Projects </a> |
+            <a href="https://sunrein.github.io/blog-index.html"> Blog</a> |
+            <a href="https://sunrein.github.io/contact.html"> Contact</a>
+
+    </nav>
+    <hr>
+    </section>
+    
+  <article>
+
+
+    <h2>Using Ruby Classes - 11/8/2015<br>
+    Classes, instance methods, instance variables, and more!</h2>
+    <p>
+  Hello there! Today, we are talking about Ruby <span>classes.</span> I've found it a bit hard to figure out how classes work with the examples I found online. Often, and inexplicably might I add, they involve fruit, trees, plants, flowers, or some other type of plant matter. I don't find this to be a very helpful demonstration of what classes can do, so I decided to make my own example and take my inspiration from books, because that's what makes sense to me.
+  </p>
+  <h3>What is a class?</h3>
+  <p>
+  Classes are a great way of storing information, and manipulating that information as you see fit with methods that you create. Unlike what we have been doing before, using methods in relative isolation from one another, classes contain methods that can be used within the entire class, sharing information between methods. The methods that we use within a class are called instance methods. This may seem a little confusing, so let's use a real life example!
+  </p>
+  <h3>Using classes to store character information</h3>
+  <p>In case you didn't know, November is National Novel Writing Month. This means that right now, there are thousands of people all trying to write an entire novel in just 30 days. I am far too busy this month to even try, but I can imagine that when writing that much that quickly, it might be hard to keep track of information about the characters you've been creating. Consistency is important, so we need to keep track of who the characters are and some of their biographical information. We can do this with a class and instance methods.
+  </p>
+  <p>I am going to use this class to create characters. I'm going to start off by making the class. This is really easy. Just type "class" and the name you want your class to be. The title of your class should be capitalized, like in the example below.
+  <br>
+  <code>class Character</code>
+  <br>
+  Cool. Now we want to request some arguments when we are making that class. What do you want to remember about your character? Probably just the basics for now, since you're just starting your novel. My pretend novel is about a wizard high school (totally original, I know). My protagonist is named Hiro, he is sixteen, and I might have characters that have different positions later, so I'm also going to note that he is both a wizard and a student. Also, he is the protagonist, so I am going to note that, too. Here's how we do it!
+  <br>
+  <br>
+  <code>class Character # we've already done this bit
+
+    def initialize(name, age, occupation, status)
+      @name = name
+      @age = age
+      @occupation = occupation
+      @status = status
+    end
+    </code>
+    Here, we have just created some <span>instance variables.</span> These are variables that we can use throughout the class. I initialized them here because when we create the character, we are going to need to provide each of these details, so the program needs to know what they are now, rather than later. You designate an intance variable using @. Now we can use these same variables for every new character we create.
+    </p>
+
+    <p>Now I want to be able to access this data, and fast. I'm going to need to make an <span>instance method</span> to do this.
+    
+    <code> 
+    def character_info
+      puts "name: #{@name}"
+      puts "age: #{@age}"
+      puts "occupation: #{@occupation}"
+      puts "status: #{@status}"
+    end
+    </code>
+    So what I'm doing here is puts-ing all of the data I want. This is all the information we have on the character so far, and of course, we can always add more later as the story becomes more complex. We are calling all of the instance variables we have created thus far, and we can use this method on the character we created to call his information at any time.
+    </p>
+
+    <p>We should see what this actually looks like when we create a character. Creating a character with this class we've built is easy. It is just like creating a new hash or a new array.
+    <code> 
+hiro = Character.new("Hiro", 16, "wizard/student", "protagonist") 
+    </code>
+    Now we have the character, and just to make sure all of the information is right and the class is working the way it should, we can do this:
+   <code>
+      hiro.character_info
+      </code>
+      And it will return:
+      <code>
+      name: Hiro 
+      age: 16 
+      occupation: wizard/student 
+      status: protagonist 
+      </code>
+      </p>
+      <p> What we have here is perfectly fine. However, we can clean it up a bit using attr_accessor. This will allow us to both read and rewrite values associated with the class instances we've created. So rather than creating a bunch of methods whose only purpose right now is returning the value of the instance variable, we can use attr_accessor instead. Here's how it looks:
+      </p>
+      <p>
+      <code>
+      class Character
+
+        attr_accessor :age
+        attr_accessor :name
+        attr_accessor :occupation
+        attr_accessor :status
+  
+        def initialize(name, age, occupation, status)
+          @name = name
+          @age = age
+          @occupation = occupation
+          @status = status
+        end
+        </code>
+
+        So now we can do something like
+        <code>
+        hiro.age
+        </code>
+        and we will get the value 16 in return. We can also change the age if we so choose, like this:
+        <code>
+        hiro.age(17)
+        </code>
+        and it will automatically update his age to 17.
+
+        </p>
+        <h3>More practice :D</h3>
+        <p>
+        So here's a twist. I decided I don't want Hiro to be my protagonist anymore. Now he's my villain. And I'm going to create a new character to be my actual hero. This is just so you can see a bit more of what's going on in the class, and how we create more instances and change their values.
+        <p>
+        <code>
+hiro = Character.new("Hiro", 16, "wizard/student", "protagonist")
+hiro.character_info
+hiro.age=17
+hiro.status=("villain")
+
+sabrina = Character.new("Sabrina", 22, "the brightest witch of her age", "hero")
+sabrina.character_info
+hiro.character_info
+
+name: Sabrina 
+age: 22
+occupation: the brightest witch of her age 
+status: hero 
+
+name: Hiro 
+age: 17 
+occupation: wizard/student 
+status: villain 
+</code>
+</p>
+  <p>I named the character after myself. That's only a little conceited, right? Also, I might be borrowing a bit too heavily from Harry Potter. Oh well, these are things I can always edit later.
+  </p>
+  <h3>Conclusion</h3>
+  <p>
+  Hopefully you've learned a bit more about classes here. I'm still getting the hang of them myself, but more practice will make everything better. Best of luck with classes!</p>
+
+
+ </article>
+ <hr>
+
+  <footer>
+    <nav>
+   <a href="https://github.com/sunrein">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Github.png"> </a></td>
+      
+    <a href="https://www.linkedin.com/pub/sabrina-unrein/103/3a1/37">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Linkedin.png"></a>
+
+    <a href="mailto:sabrina.unrein@gmail.com">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquicons/128/Email.png"/>
+      </a>
+    <a href="https://twitter.com/sabermoon"><img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Twitter.png"/>
+      </a>
+    <a href="https://instagram.com/unmanagedmischief/"><img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Instagram.png"/>
+      </a>
+    <a href="https://www.facebook.com/sabrina.unrein16"><img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Facebook.png"/>
+      </a>
+    
+    </nav>
+
+    </footer>
+
+</body>
+
+
+</html>

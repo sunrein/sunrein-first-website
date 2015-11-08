@@ -97,6 +97,7 @@ figure > img {
 	height:300px;
 	width:auto;
 	margin:1em;
+	border: 1px solid black;
 }
 figure {
 	float:middle;
@@ -105,6 +106,7 @@ figure {
 
 figcaption {
 	float:middle;
+	font-size:11px;
 }
 
 span {
