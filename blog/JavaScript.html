@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+
+  <title>Hashes v Objects</title>
+</head>
+
+<body>
+
+  <header>
+      <h1><span>S</span>.unrein blog</h1>
+  </header>
+  <section>
+     
+    <nav>
+            <a href="http://sunrein.github.io/"> Home </a> |
+            <a href="https://sunrein.github.io/projects/index.html">Projects </a> |
+            <a href="https://sunrein.github.io/about-me.html">About Me </a> |
+            <a href="https://sunrein.github.io/contact.html"> Contact</a> |
+            <a href="https://sunrein.github.io/blog-index.html"> Blog</a>
+        
+      </nav>
+    <hr>
+    </section>
+    
+  <article>
+
+
+    <h2>Ruby Hashes vs JavaScript Objects - 11/15/2015<br>
+    Differences in the Data Structures</h2>
+    <p>
+    Hashes in Ruby and objects in JavaScript are very similar. In fact, I found it helpful to think of them synonymously when starting JavaScript, having a background in Ruby, to figure out how objects work. However, they aren't quite the same, and from what I can tell, the main differences are found in syntax.
+    </p>
+    <h3>Hashes</h3>
+    <p>
+    Ruby hashes are data structures. They store information in pairs with a key and a value. Using the key when accessing information in a hash, we can access the value associated with it. In this way, a key can be thought of in similar terms to a variable assigned to a value. Keys and values can be any type of object, whether they be integers, strings, variables, and symbols. While "hash rockets" (=>) can be used in hashes when calling a value from a key, colon notation is more common. It should be noted that the keys with colons after them are symbols in Ruby. Here's an example below:
+    <code> 
+    my_info = {
+    name: "Sabrina"
+    age: 22
+    hometown: "Denver"
+    }
+    </code>
+    </p>
+
+    <h3> Objects</h3>
+    <p>
+    Javascript objects are also data structures. In fact, they also look quite similar in terms of syntax, storing information in name/value pairs. Here's an example, using the same data I used above, just in JavaScript rather than Ruby.
+      <code>
+        var my_info = {
+        name: "Sabrina",
+        age: 22,
+        hometown: "Denver"
+        };
+      </code>
+    </p>
+     <p>
+      As you can see above, there are a few differences. First, you have to declare the object as a variable using "var". If you do not do this, JavaScript won't be able to read the object. Also, there is more puncuation involved. For instance, Good practicees for JavaScript dictate that commas should appear after each value (some Ruby style guides recommend you do this wish hashes as well, but I have not used them before). Also, there needs to be a semi-colon after the closing curly brace, just so JavaScript recognizes this as the end of the code block. Also, since there is no hash rocket alternative in JavaScript, the names with colons in JavaScript are not symbols. Also, names, unlike keys, can only be strings or variables. Values, just like values in hashes, can be integers, strings, and symbols.
+      </p>
+      <h3>Calling information from these structures</h3>
+      <p>
+      The other main difference in these structures stems from how you access the values stored within. In Ruby, if I wanted to call the value contained in the key name, it would look like this:
+      <code>
+      my_info[:name]
+
+      #this would return
+      "Sabrina"
+      </code>
+      If I wanted to access the value from the my_info object in JavaScript, the notation would look like this:
+      <code>
+      my_info.name
+
+      #this would return
+      "Sabrina"
+      </code>
+      </p>
+      <h3>Conclusion</h3>
+      These are the fundamental differences in Ruby hashes and JavaScript objects. As you can see, the main differences are found in syntax and notation, but in theory, they function quite similarly. I'm sure there are some more subtle differences between the two that can be found through more practice and use of each structure in their respective languages.
+</article>
+  <hr>
+
+  <footer>
+    <nav>
+   <a href="https://github.com/sunrein">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Github.png"> </a></td>
+      
+    <a href="https://www.linkedin.com/pub/sabrina-unrein/103/3a1/37">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Linkedin.png"></a>
+
+    <a href="mailto:sabrina.unrein@gmail.com">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquicons/128/Email.png"/>
+      </a>
+    <a href="https://twitter.com/sabermoon"><img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Twitter.png"/>
+      </a>
+    <a href="https://instagram.com/unmanagedmischief/"><img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Instagram.png"/>
+      </a>
+    <a href="https://www.facebook.com/sabrina.unrein16"><img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Facebook.png"/>
+      </a>
+    
+    </nav>
+
+    </footer>
+
+</body>
+
+
+</html>
