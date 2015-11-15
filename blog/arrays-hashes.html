@@ -47,9 +47,18 @@
         Here's an example of an array:
          </p>
         <p>
-
-        best_selling_novels[A Tale of Two Cities, The Lord of the Rings, The Hobbit, The Little Prince, Harry Potter and the Philosopher's Stone, And Then There Were None, Dream of the Red Chamber]
+        <code>
+        best_selling_novels =
+        [A Tale of Two Cities, 
+        The Lord of the Rings, 
+        The Hobbit, 
+        The Little Prince, 
+        Harry Potter and the Philosopher's Stone, 
+        And Then There Were None, 
+        Dream of the Red Chamber]
+        </code>
          </p>
+
         <p>
         For this example, I've looked up some of the best selling novels of all time, and I'm storing them in an array. I've listed them in order of number of copies sold, so I would like to maintain that order, which is why I've chosen an array. Now I want to put it to use. What is the third best selling novel of all time, according to this array?
         </p>
@@ -71,13 +80,24 @@
         In our book example, if we wanted to store the data about sales rather than focusing on the order, we would use a hash. The key would be the book's title, and the value would be number of copies sold. This would be organized like this:
          </p>
         <p>
-        best_selling_novels = {"A Tale of Two Cities": "200 million", "The Lord of the Rings": "150 million", "The Hobbit": "140.6 million", "The Little Prince": "140 million", "Harry Potter and the Philosopher's Stone": "107 million", "And Then There Were None": "100 million", "Dream of the Red Chamber": "100 million"}
+        <code>
+        best_selling_novels = {"A Tale of Two Cities": "200 million", 
+        "The Lord of the Rings": "150 million", 
+        "The Hobbit": "140.6 million", 
+        "The Little Prince": "140 million", 
+        "Harry Potter and the Philosopher's Stone": "107 million", 
+        "And Then There Were None": "100 million", 
+        "Dream of the Red Chamber": "100 million"}
+        </code>
         </p>
         <p>
         This is just one way of creating a new hash, but I thought it well illustrated how the keys and values are paired together. For example, "A Tale of Two Cities" is a key, and it's value is "200 million". If we knew it was one of the best selling novels, but didn't know how many copies, we could retrieve them from the hash like this:
         </p>
         <p>
-        best_selling_novels[:"A Tale of Two Cities"] and it would return "200 million."
+        <code>
+        best_selling_novels[:"A Tale of Two Cities"] 
+        </code>
+        and it would return "200 million."
         </p>
       <h3>Conclusion</h3>
         <p>
