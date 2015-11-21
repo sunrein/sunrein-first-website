@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css"> 
+      <link rel="stylesheet" type="text/css" href="../stylesheets/cheat-sheet.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+
+  <title>Ruby Cheat Sheet</title>
+</head>
+
+<body>
+
+  <header>
+      <h1><span>S</span>.unrein blog</h1>
+  </header>
+  <section>
+     
+    <nav>
+           <a href="http://sunrein.github.io/"> Home </a> |
+            <a href="https://sunrein.github.io/projects/index.html">Projects </a> |
+            <a href="https://sunrein.github.io/about-me.html">About Me </a> |
+            <a href="https://sunrein.github.io/contact.html"> Contact</a> |
+            <a href="https://sunrein.github.io/blog-index.html"> Blog</a>
+        
+      </nav>
+    <hr>
+    </section>
+    
+  <article>
+
+
+    <h2>Ruby Cheat Sheet</h2>
+   <table>
+   <tbody>
+      <tr>
+        <th>Concept</th>
+        <th>Code</th>
+        <th>Example</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Comment</td>
+        <td>
+          <code><span>#</span></code>
+        </td>
+        <td>
+          <code><span>#comment in the code</span></code>
+        </td>
+        <td>
+        Ruby ignores everything that is marked as a comment. It does not try to
+        execute it. Comments are just there for you as information. Comments are also
+        commonly used to comment out code. That is when you don't want some part of
+        your code to execute but you don't want to delete it just yet, because you are
+        trying different things out.
+        </td>
+      </tr>
+      <tr>
+        <td>Variables</td>
+        <td><code><span>variable = some_value</span></code></td>
+        <td>
+          <code><span>
+          name = "Tobi" <br>
+          name # => "Tobi"<br>
+          <br>
+          sum = 18 + 5
+          sum # => 23
+          </span></code>
+        </td>
+        <td>With a variable you tell Ruby that from now on you want to refer to that value
+         by the name you gave it. So for the first example, from now on when you use name Ruby will know that you meant "Tobi".
+         </td>
+      </tr>
+
+      <tr>
+        <td>Console<br>output</td>
+        <td>
+          <code>puts<span> something</span></code></td>
+        <td>
+          <code><span>puts "Hello World"<br>
+          puts [1, 5, "mooo"]</span></code>
+        </td>
+        <td>Prints its argument to the console. Can be used in Rails apps to print something in the console where the server is running.
+        </td>
+        </tr>
+
+        <tr>
+          <td>Call a<br>
+          method</td>
+          <td>
+          <code><span>object.method(arguments)</span></code>
+          </td>
+          <td>
+          <code><span>string.length<br>
+          array.delete_at(2)<br>
+          string.gsub("ae", "ä")</span></code>
+          </td>
+          <td>Calling a method is also often referred to as sending a message in Ruby. Basically we are sending an object some kind of message and are waiting for its
+          response. This message may have no arguments or multiple arguments, depending on
+          the message. So we kindly ask the object to do something or give us some information.
+          When you "call a method" or "send a message" something happens. In the first example
+          we ask a String how long it is (how many characters it consists of). In the last
+          example we substitute all occurrences of "ae" in the string with the German "ä".
+          Different kinds of objects (Strings, Numbers, Arrays...) understand different messages.
+          </td>
+        </tr>
+
+        <tr>
+          <td>Define a<br>
+          method</td>
+          <td>
+          <code><span>def name(parameter)<br>
+                      # method body<br>
+                      end</span></code>
+          </td>
+          <td>
+            <code><span>def greet(name)<br>
+              puts "Hi there " + name<br>
+              end</span></code>
+          </td>
+          <td>Methods are basically reusable units of behaviour. And you can define them yourself just like this. Methods are small and focused on implementing a specific behaviour.<br>
+          Our example method is focused on greeting people. You could call it like this: <code><span>greet("Tobi")</span></code></td>
+        </tr>
+
+        <tr>
+          <td>Equality</td>
+          <td>
+            <code><span>object == other</span></code>
+            </td>
+          <td>
+          <code><span>true == true #<br> => true<br>
+
+              3 == 4 # => false
+
+              "Hello" == "Hello" # => true<br>
+                "Helo" == "Hello" # => false</span></code>
+              </td>
+            <td>With two equal signs you can check if two things are the same. If so,<code><span> true</span></code> will be returned; otherwise, the result will be<code><span> false</span></code>.
+            </td>
+          </tr>
+
+          <tr>
+            <td>Inequality</td>
+            <td>
+            <code><span>object != other </span></code>
+            </td>
+            <td><code><span>true != true # => false<br>
+                3 != 4 # => true</span></code>
+            </td>
+            <td>Inequality is the inverse to equality, e.g. it results in <code><span>true</span></code> when two values are not the same and it results in<code><span> false</span></code> when they are the same.
+            </td>
+          </tr>
+
+          <tr>
+            <td>Decisions with if</td>
+            <td>
+            <code><span>if condition<br>
+                        # happens when true<br>
+                        else<br>
+                        # happens when false<br>
+                        end</span></code>
+              </td>
+            <td><code><span>if input == password<br>
+                            grant_access<br>
+                            else<br>
+                            deny_access<br>
+                            end</span></code>
+            </td>
+            <td>With if-clauses you can decide based upon a condition what to do. When the condition is considered true, then the code after it is executed. If it is considered false, the code after the "else" is executed.<br>
+
+            In the example, access is granted based upon the decision if a given input matches the password.
+            </td>
+          </tr>
+
+          <tr>
+            <td>Constants</td>
+            <td><code><span>CONSTANT = some_value</span></code>
+            <td><code><span>PI = 3.1415926535<br>
+                            PI # => 3.1415926535<br><br>
+                            ADULT_AGE = 18<br>
+                            ADULT_AGE # => 18
+                            </span></code>
+              </td>
+            <td>Constants look like variables, just in UPCASE. Both hold values and give you a name to refer to those values. However while the value a variable holds may change or might be of an unknown value (if you save user input in a variable) constants are different. They have a known value that should never change. Think of it a bit like mathematical or physical constants. These don't change, they always refer to the same value.</td>
+          </tr>
+
+          <tr>
+            <td>Create<br>
+            (String)</td>
+            <td><code><span>'A string'</span></code></td>
+            <td><code><span>'Hello World'<br>
+
+                              'a'<br>
+
+                              'Just characters 129 _!$%^'<br>
+
+                              ''
+                            </span></code></td>
+            <td>A string is created by putting quotation marks around a character sequence. A Ruby style guide recommends using single quotes for simple strings.</td>
+            </tr>
+          <tr>
+            <td>Interpolation<br>
+            (String)</td>
+            <td><code><span>"A string and an #{expression}"</span></code></td>
+            <td><code><span>"Email: #{user.email}"<br>
+
+                            "The total is #{2 + 2}"<br>
+
+                              "A simple string"</span></code></td>
+
+            <td>You can combine a string with a variable or Ruby expression using double quotation marks. This is called "interpolation." It is okay to use double quotation marks around a simple string, too.</td>
+          </tr>
+          
+          <tr>
+            <td>Length<br>
+            (String)</td>
+            <td><code><span>string.length</span></code></td>
+            <td><code><span>"Hello".length # => 5<br>
+
+                            "".length # => 0<br>
+                            </span></code></td>
+
+            <td>You can send a string a message, asking it how long it is and it will respond with the number of characters it consists of. You could use this to check if the desired password of a user exceeds the required minimum length. Notice how we add a comment to show the expected result.</td>
+          </tr>
+
+             <tr>
+            <td>Concatenate<br>
+            (String)</td>
+            <td><code><span>string + string2</span></code></td>
+            <td><code><span>"Hello " + "reader"<br>
+                            # => "Hello reader"<br>
+                            "a" + "b" + "c" # => "abc"
+                            </span></code></td>
+
+            <td>Concatenates two or more strings together and returns the result.</td>
+          </tr>
+
+              <tr>
+            <td>Substitute<br>
+            (String)</td>
+            <td><code><span>string.gsub(a_string, substitute)</span></code></td>
+            <td><code><span>"Hae".gsub("ae", "ä")<br>
+                              # => "Hä"<br><br>
+                              "Hae".gsub("b", "ä")<br>
+                              # => "Hae"<br><br>
+                              "Greenie".gsub("e", "u")<br>
+                              # => "Gruuniu"
+                            </span></code></td>
+
+            <td>gsub stands for "globally substitute". It substitutes all occurrences of<code><span> a_string </code></span>within the string with <code><span>substitute</span></code>.</td>
+          </tr>
+
+            <tr>
+            <td>Access<br>
+            (String)</td>
+            <td><code><span>string[position]</span></code></td>
+            <td><code><span>"Hello"[1] => "e"
+                            </span></code></td>
+
+            <td>Access the character at the given position in the string. Be aware that the first position is actually position 0.</td>
+          </tr>
+
+           <tr>
+            <td>Create<br>
+            (Array)</td>
+            <td><code><span>[contents]</span></code></td>
+            <td><code><span>[]<br>
+
+                            ["Rails", "fun", 5]
+                            </span></code></td>
+
+            <td>Creates an Array, empty or with the specified contents.</td>
+          </tr>
+
+           <tr>
+            <td>Number of Elements<br>
+            (Array)</td>
+            <td><code><span>array.size</span></code></td>
+            <td><code><span>[].size # => 0<br>
+
+                            [1, 2, 3].size # => 3<br>
+
+                            ["foo", "bar"].size # => 2
+                            </span></code></td>
+
+            <td>Returns the number of elements in an Array.</td>
+          </tr>
+
+           <tr>
+            <td>Access<br>
+            (Array)</td>
+            <td><code><span>array[position]</span></code></td>
+            <td><code><span>array = ["hi", "foo", "bar"]<br>
+                            array[0] # => "hi"<br>
+                            array[2] # => "bar"
+                            </span></code></td>
+
+            <td>As an Array is a collection of different elements, you often want to access a single element of the Array. Arrays are indexed by numbers so you can use a number to access an individual element. Be aware that the numbering actually starts with "0" so the first element actually is the 0th. And the last element of a three element array is element number 2.</td>
+          </tr>
+
+           <tr>
+            <td>Adding<br>
+            (Array)</td>
+            <td><code><span>array << element</span></code></td>
+            <td><code><span>array = [1, 2, 3]<br>
+                            array << 4<br>
+                            array # => [1, 2, 3, 4]
+                            </span></code></td>
+
+            <td>Adds the element to the end of the array, increasing the size of the array by one.</td>
+          </tr>
+
+           <tr>
+            <td>Assiging<br>
+            (Array)</td>
+            <td><code><span>array[number] = value</span></code></td>
+            <td><code><span>array = ["hi", "foo", "bar"]<br>
+                            array[2] = "new"<br>
+                            array # => ["hi", "foo", "new"]
+                            </span></code></td>
+
+            <td>Assigning new Array Values works a lot like accessing them; use an equals sign to set a new value. Voila! You changed an element of the array! </td>
+          </tr>
+
+
+           <tr>
+            <td>Delete at index<br>
+            (Array)</td>
+            <td><code><span>array.delete_at(i)</span></code></td>
+            <td><code><span>array = [0, 14, 55, 79]<br>
+                            array.delete_at(2)<br>
+                            array # => [0, 14, 79]
+                            </span></code></td>
+
+            <td>Deletes the element of the array at the specified index. Remember that indexing starts at 0. If you specify an index larger than the number of elements in the array, nothing will happen.
+              </td>
+          </tr>
+
+           <tr>
+            <td>Iterating<br>
+            (Array)</td>
+            <td><code><span>array.each do |e| .. end</span></code></td>
+            <td><code><span>persons.each do |p| puts p.name end<br>
+
+                            numbers.each do |n| n = n * 2 end
+                            </span></code></td>
+
+            <td>"Iterating" means doing something for each element of the array. Code placed between do and end determines what is done to each element in the array.
+
+            <br>The first example prints the name of every person in the array to the console. The second example simply doubles every number of a given array.
+              </td>
+          </tr>
+
+
+
+   </tbody>
+   </table>
+
+
+ </article>
+ <hr>
+
+  <footer>
+    <nav>
+   <a href="https://github.com/sunrein">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Github.png"> </a></td>
+      
+    <a href="https://www.linkedin.com/pub/sabrina-unrein/103/3a1/37">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Linkedin.png"></a>
+
+    <a href="mailto:sabrina.unrein@gmail.com">
+      <img src="https://cdn2.iconfinder.com/data/icons/social-aquicons/128/Email.png"/>
+      </a>
+    <a href="https://twitter.com/sabermoon"><img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Twitter.png"/>
+      </a>
+    <a href="https://instagram.com/unmanagedmischief/"><img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Instagram.png"/>
+      </a>
+    <a href="https://www.facebook.com/sabrina.unrein16"><img src="https://cdn2.iconfinder.com/data/icons/social-aquiocons/128/Aquicon-Facebook.png"/>
+      </a>
+    
+    </nav>
+
+    </footer>
+
+</body>
+
+
+</html>
