@@ -111,3 +111,7 @@ p > code {
     white-space: pre;
     text-align: left;
 }
+
+article > p {
+text-align: left;
+}
