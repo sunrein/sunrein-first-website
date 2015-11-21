@@ -1,0 +1,38 @@
+table {
+	border-collapse: collapse;
+	border-spacing:2px;
+	border-color: #C2ACC4;
+	width:100%;
+	margin-bottom: 20px;
+	background-color: transparent;
+	display:table;
+
+}
+
+tr {
+	background-color: #f9f9f9;
+
+}
+
+td {
+	text-align: left;
+	padding: 8px;
+	vertical-align: top;
+	border-top: solid 1px #C2ACC4;
+}
+
+th {
+	font-weight: bold;
+	color:black;
+	padding: 10px;
+	vertical-align: top;
+	border-top:1px solid #C2ACC4;
+	text-align: left;
+	display: table-cell;
+}
+
+code > span {
+	font-style: italic;
+	color: #ffb80e;
+	font-weight: bold;
+}
