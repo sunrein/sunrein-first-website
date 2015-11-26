@@ -3,7 +3,7 @@ body {
 	color:#777;
 	display: block;
 	font-family: 'Oxygen', sans-serif;
-	font-size: 14px;
+	font-size: 20px;
 }
 
 h1 {
@@ -35,20 +35,20 @@ a:hover{
 	color:#FFDD58;
 }
 
-h2 {
+/*h2 {
 	font-weight: bold;
-	font-size:25px;
+	font-size:28px;
 	color:black;
 	line-height: 1.5em;
 	letter-spacing:.2em;
 	float:middle;
 	text-align: center;
 
-}
+}*/
 
 h3 {
 	font-weight: bold;
-	font-size:18px;
+	font-size:24px;
 	color:black;
 	border:3em;
 	text-align: center;
