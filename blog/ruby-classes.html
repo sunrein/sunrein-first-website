@@ -19,11 +19,11 @@
   <section>
      
      <nav>
-             <a href="http://sunrein.github.io/"> Home </a> |
-            <a href="https://sunrein.github.io/projects/index.html">Projects </a> |
-            <a href="https://sunrein.github.io/about-me.html">About Me </a> |
-            <a href="https://sunrein.github.io/contact.html"> Contact</a> |
-            <a href="https://sunrein.github.io/blog-index.html"> Blog</a>
+            <a href="http://sunrein.github.io/"> Home </a> <span>|</span>
+            <a href="https://sunrein.github.io/projects/index.html">Projects </a><span> |</span>
+            <a href="https://sunrein.github.io/about-me.html">About Me </a> <span>|</span>
+            <a href="https://sunrein.github.io/contact.html"> Contact</a> <span>|</span>
+            <a href="https://sunrein.github.io/blog-index.html"> Blog</a> 
 
     </nav>
     <hr>
@@ -48,7 +48,7 @@
   <br>
   <code>class Character</code>
   <br>
-  Cool. Now we want to request some arguments when we are making that class. What do you want to remember about your character? Probably just the basics for now, since you're just starting your novel. My pretend novel is about a wizard high school (totally original, I know). My protagonist is named Hiro, he is sixteen, and I might have characters that have different positions later, so I'm also going to note that he is both a wizard and a student. Also, he is the protagonist, so I am going to note that, too. Here's how we do it!
+  Cool. Now we want to request some <span>arguments</span> to be initialized when we make a new instance of that class. What do you want to remember about your character? Probably just the basics for now, since you're just starting your novel. My pretend novel is about a wizard high school (totally original, I know). My protagonist is named Hiro, he is sixteen, and I might have characters that have different positions later, so I'm also going to note that he is both a wizard and a student. Also, he is the protagonist, so I am going to note that, too. Here's how we do it!
   <br>
   <br>
   <code>class Character # we've already done this bit
@@ -92,7 +92,7 @@ hiro = Character.new("Hiro", 16, "wizard/student", "protagonist")
       status: protagonist 
       </code>
       </p>
-      <p> What we have here is perfectly fine. However, we can clean it up a bit using attr_accessor. This will allow us to both read and rewrite values associated with the class instances we've created. So rather than creating a bunch of methods whose only purpose right now is returning the value of the instance variable, we can use attr_accessor instead. Here's how it looks:
+      <p> What we have here is perfectly fine. However, we can clean it up a bit using <span>attr_accessor</span>. This will allow us to both read and rewrite values associated with the class instances we've created. So rather than creating a bunch of methods whose only purpose right now is returning the value of the instance variable, we can use attr_accessor instead. Here's how it looks:
       </p>
       <p>
       <code>
